@@ -1,6 +1,26 @@
 # 腾讯云部署指南 - Tencent Cloud Deployment Guide
 
-## 🚀 快速部署到腾讯云 (Quick Deploy to Tencent Cloud)
+> 🎉 **Note**: This website is already deployed on GitHub Pages! This guide provides alternative deployment options for Tencent Cloud.
+> 
+> **Current Live Site**: [https://zhoulei2020.github.io/birthday-celebration](https://zhoulei2020.github.io/birthday-celebration)
+
+## � 为什么选择腾讯云？(Why Choose Tencent Cloud?)
+
+**适用场景 (Use Cases):**
+- 🇨🇳 主要用户在中国大陆 (Primary users in mainland China)
+- 🚀 需要更快的访问速度 (Need faster access speed in China)
+- 🏢 企业级需求 (Enterprise requirements)
+- 🔒 需要更多控制权 (Need more control)
+
+**优势 (Advantages):**
+- ✅ 中国大陆访问速度更快 (Faster access in mainland China)
+- ✅ 本地化服务支持 (Localized service support)
+- ✅ 更多自定义选项 (More customization options)
+- ✅ 企业级安全性 (Enterprise-level security)
+
+---
+
+## �🚀 腾讯云替代部署方案 (Alternative Tencent Cloud Deployment)
 
 ### 方案一：静态网站托管 (推荐) - Static Website Hosting (Recommended)
 

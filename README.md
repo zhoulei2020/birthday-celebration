@@ -35,16 +35,30 @@ A beautiful, interactive birthday celebration website that you can customize and
 2. Open `index.html` in any modern web browser
 3. Customize using the settings panel (⚙️ button)
 
-### GitHub Pages Deployment
+### GitHub Pages Deployment (✅ Current Deployment)
 1. Create a new repository on GitHub
 2. Upload all files (`index.html`, `styles.css`, `script.js`, `README.md`)
 3. Go to repository Settings → Pages
 4. Select "Deploy from a branch" → "main" → "/ (root)"
 5. Your site will be available at: `https://yourusername.github.io/repository-name`
 
-### Tencent Cloud Deployment
+**Live Demo**: [View the website](https://zhoulei2020.github.io/birthday-celebration)
 
-#### Option 1: Tencent Cloud Static Website Hosting (腾讯云静态网站托管)
+### Alternative Deployment Options
+
+#### Netlify (Recommended Alternative)
+1. Go to [netlify.com](https://netlify.com) and sign up
+2. Drag and drop your project folder to Netlify
+3. Your site will be live instantly with a custom URL
+4. Optional: Connect to your GitHub repository for auto-deployment
+
+#### Vercel
+1. Go to [vercel.com](https://vercel.com) and sign up with GitHub
+2. Import your GitHub repository
+3. Deploy with zero configuration
+4. Get automatic deployments on every push
+
+#### Tencent Cloud Static Website Hosting
 1. **Login to Tencent Cloud Console**:
    - Go to [console.cloud.tencent.com](https://console.cloud.tencent.com)
    - Navigate to "CloudBase" (云开发) → "Static Website Hosting" (静态网站托管)
@@ -60,69 +74,19 @@ A beautiful, interactive birthday celebration website that you can customize and
    - Set `index.html` as the index page
    - Your site will be available at: `https://your-env-id.tcloudbaseapp.com`
 
-#### Option 2: Tencent Cloud Object Storage (COS) + CDN
-1. **Create COS Bucket**:
-   - Go to COS Console (对象存储控制台)
-   - Create bucket with public read access
-   - Upload all website files
+*For detailed Tencent Cloud deployment instructions, see `DEPLOY_TENCENT.md`*
 
-2. **Enable Static Website**:
-   - In bucket settings, enable "Static Website" (静态网站)
-   - Set index document to `index.html`
-   - Note the endpoint URL
+## 🔄 Updating Your Website
 
-3. **Optional CDN Setup**:
-   - Go to CDN Console (内容分发网络)
-   - Add domain acceleration
-   - Configure origin server as your COS bucket
-   - Get accelerated domain for faster access
-
-#### Option 3: Tencent Cloud Virtual Machine (CVM)
-1. **Create CVM Instance**:
-   - Choose lightweight application server (轻量应用服务器)
-   - Select appropriate region and configuration
-   - Choose operating system (Ubuntu/CentOS recommended)
-
-2. **Install Web Server**:
+Since you're using GitHub Pages, updating is easy:
+1. Make changes to your files locally
+2. Commit and push to GitHub:
    ```bash
-   # Install Nginx
-   sudo apt update
-   sudo apt install nginx
-   
-   # Start Nginx
-   sudo systemctl start nginx
-   sudo systemctl enable nginx
+   git add .
+   git commit -m "Update website"
+   git push origin main
    ```
-
-3. **Deploy Files**:
-   ```bash
-   # Upload files to server (use SCP, SFTP, or web upload)
-   # Place files in /var/www/html/
-   sudo cp index.html /var/www/html/
-   sudo cp styles.css /var/www/html/
-   sudo cp script.js /var/www/html/
-   
-   # Set permissions
-   sudo chown -R www-data:www-data /var/www/html/
-   ```
-
-4. **Configure Domain** (Optional):
-   - Purchase domain from Tencent Cloud
-   - Add DNS record pointing to your server IP
-   - Configure SSL certificate for HTTPS
-
-#### Cost Comparison:
-- **Static Website Hosting**: Most cost-effective for simple sites (免费额度 + 按使用量计费)
-- **COS + CDN**: Good for high traffic sites (存储费用 + CDN流量费用)
-- **CVM**: More control but higher cost (服务器租用费用)
-
-#### Recommended Approach:
-For your birthday website, **Static Website Hosting** is recommended because:
-- ✅ Lowest cost (often free tier available)
-- ✅ Easy deployment
-- ✅ Automatic scaling
-- ✅ Built-in CDN acceleration
-- ✅ No server maintenance required
+3. GitHub Pages will automatically update your live site within a few minutes!
 
 ## 🎨 Customization
 
