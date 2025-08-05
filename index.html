@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎉 Happy Birthday! 🎂</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="confetti-container" id="confetti-container"></div>
+    
+    <div class="container">
+        <header class="birthday-header">
+            <h1 class="birthday-title">🎉 Happy Birthday! 🎂</h1>
+            <p class="birthday-subtitle">Celebrating someone special today!</p>
+        </header>
+
+        <main class="birthday-content">
+            <div class="birthday-person">
+                <div class="avatar-container">
+                    <img src="https://via.placeholder.com/200x200/ff6b6b/ffffff?text=🎉" alt="Birthday Person" class="avatar" id="avatar">
+                    <div class="avatar-overlay">
+                        <span class="age-badge" id="age-badge">🎂</span>
+                    </div>
+                </div>
+                <h2 class="person-name" id="person-name">Amazing Person</h2>
+                <p class="birthday-date" id="birthday-date">Today is your special day!</p>
+            </div>
+
+            <div class="birthday-message">
+                <div class="message-card">
+                    <h3>🌟 Birthday Wishes 🌟</h3>
+                    <p class="main-message" id="main-message">
+                        May this special day bring you endless joy, laughter, and wonderful memories! 
+                        Here's to another year of amazing adventures, dreams coming true, and all the 
+                        happiness your heart can hold. You deserve all the best today and always!
+                    </p>
+                </div>
+            </div>
+
+            <div class="birthday-activities">
+                <div class="activity-grid">
+                    <div class="activity-card" onclick="blowCandles()">
+                        <div class="candles-container">
+                            <div class="candle">
+                                <div class="flame" id="flame1"></div>
+                                <div class="wick"></div>
+                                <div class="candle-body"></div>
+                            </div>
+                            <div class="candle">
+                                <div class="flame" id="flame2"></div>
+                                <div class="wick"></div>
+                                <div class="candle-body"></div>
+                            </div>
+                            <div class="candle">
+                                <div class="flame" id="flame3"></div>
+                                <div class="wick"></div>
+                                <div class="candle-body"></div>
+                            </div>
+                        </div>
+                        <p>🕯️ Blow the candles!</p>
+                    </div>
+
+                    <div class="activity-card" onclick="playBirthdaySong()">
+                        <div class="music-note">🎵</div>
+                        <p>🎶 Play Birthday Song</p>
+                    </div>
+
+                    <div class="activity-card" onclick="generateWish()">
+                        <div class="gift-box">🎁</div>
+                        <p>💫 Make a Wish</p>
+                    </div>
+
+                    <div class="activity-card" onclick="throwConfetti()">
+                        <div class="party-popper">🎊</div>
+                        <p>🎉 Party Time!</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="birthday-gallery">
+                <h3>📸 Memory Lane</h3>
+                <div class="photo-grid">
+                    <div class="photo-frame">
+                        <img src="https://via.placeholder.com/150x150/ff9f43/ffffff?text=📷" alt="Memory 1">
+                        <p>Great moments</p>
+                    </div>
+                    <div class="photo-frame">
+                        <img src="https://via.placeholder.com/150x150/10ac84/ffffff?text=🌟" alt="Memory 2">
+                        <p>Fun times</p>
+                    </div>
+                    <div class="photo-frame">
+                        <img src="https://via.placeholder.com/150x150/ee5a6f/ffffff?text=💫" alt="Memory 3">
+                        <p>Adventures</p>
+                    </div>
+                    <div class="photo-frame">
+                        <img src="https://via.placeholder.com/150x150/0984e3/ffffff?text=🎈" alt="Memory 4">
+                        <p>Celebrations</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer class="birthday-footer">
+            <div class="footer-message">
+                <p>✨ Made with love for an amazing person ✨</p>
+                <div class="balloons">
+                    <div class="balloon balloon-1">🎈</div>
+                    <div class="balloon balloon-2">🎈</div>
+                    <div class="balloon balloon-3">🎈</div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Customization Panel -->
+    <div class="customize-panel" id="customize-panel">
+        <button class="customize-toggle" onclick="toggleCustomizePanel()">⚙️</button>
+        <div class="customize-content">
+            <h4>🎨 Customize</h4>
+            <div class="form-group">
+                <label for="name-input">Name:</label>
+                <input type="text" id="name-input" placeholder="Enter name" onchange="updateName()">
+            </div>
+            <div class="form-group">
+                <label for="age-input">Age:</label>
+                <input type="number" id="age-input" placeholder="Enter age" onchange="updateAge()">
+            </div>
+            <div class="form-group">
+                <label for="message-input">Message:</label>
+                <textarea id="message-input" placeholder="Enter birthday message" onchange="updateMessage()"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="avatar-input">Avatar URL:</label>
+                <input type="url" id="avatar-input" placeholder="Enter image URL" onchange="updateAvatar()">
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
